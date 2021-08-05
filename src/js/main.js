@@ -315,16 +315,29 @@ $(window).on('load resize', function() {
     }
 
     if (width > '750') {
-        var objToStick = $("#objToStick");
-        var topOfObjToStick = $(objToStick).offset().top;
+        // var objToStick = $("#objToStick");
+        // var topOfObjToStick = $(objToStick).offset().top;
+
+        var objToStick2 = $("#message-form");
+        var topOfObjToStick2 = $(objToStick2).offset().top;
+
+        // $(window).scroll(function() {
+        //     var windowScroll = $(window).scrollTop();
+
+        //     if (windowScroll > topOfObjToStick) {
+        //         $(objToStick).addClass("topWindow");
+        //     } else {
+        //         $(objToStick).removeClass("topWindow");
+        //     };
+        // });
 
         $(window).scroll(function() {
             var windowScroll = $(window).scrollTop();
 
-            if (windowScroll > topOfObjToStick) {
-                $(objToStick).addClass("topWindow");
+            if (windowScroll > topOfObjToStick2) {
+                $(objToStick2).addClass("topWindowMess");
             } else {
-                $(objToStick).removeClass("topWindow");
+                $(objToStick2).removeClass("topWindowMess");
             };
         });
     }

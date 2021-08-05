@@ -1022,16 +1022,21 @@ select {
 .info-item-top {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
     margin-bottom: 30px;
 }
 
 .info-item-top__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     width: 66.014%;
     background: #FFFFFF;
     border-radius: 10px;
     padding: 27px 33px 43px 33px;
+    min-height: 308px;
+    max-height: 100%;
     .nice-select {
         border: none;
     }
@@ -1101,12 +1106,14 @@ select {
 .info-item-top__right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
     width: 32.027%;
     background: #FFFFFF;
     border-radius: 10px;
     padding: 39px 36px 5px 36px;
+    max-height: 308px;
+    min-height: 308px;
 }
 
 .info-item-title {
@@ -1116,7 +1123,10 @@ select {
     margin-bottom: 25px;
     flex-wrap: wrap;
     b {
-        max-width: 45%;
+        max-width: 60%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         display: block;
         font-weight: normal;
         font-size: 24px;
@@ -1138,13 +1148,13 @@ select {
 
 .info-item-content {
     padding: 0 3px;
+    margin-bottom: 28px;
     border-bottom: 1px solid #F2F2F2;
     p {
         font-weight: normal;
         font-size: 14px;
         line-height: 144%;
         color: #424552;
-        margin-bottom: 28px;
     }
 }
 
@@ -1194,6 +1204,7 @@ select {
 
 .btn-el {
     display: block;
+    margin-right: 10px;
     position: relative;
     width: 26px;
     height: 26px;
@@ -1207,6 +1218,9 @@ select {
     background-position: center;
     background-repeat: no-repeat;
     @include transition02;
+    &:last-child {
+        margin-right: 0;
+    }
     &:hover {
         box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.08);
     }
@@ -1216,7 +1230,7 @@ select {
     position: absolute;
     top: 0;
     right: 28px;
-    width: 66px;
+    padding: 0 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1789,6 +1803,8 @@ select {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-left: auto;
+    margin-right: 15px;
 }
 
 .btn-filter {
@@ -2242,7 +2258,7 @@ select {
 .plans-box {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
 .plans-box__left {
@@ -2276,7 +2292,7 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 15px 34px 94px 34px;
     background: #FFFFFF;
     border-radius: 10px;
@@ -2796,7 +2812,7 @@ select {
         padding: 15px;
         font-weight: 500;
         font-size: 14px;
-        line-height: 100%;
+        line-height: 160%;
         width: 100%;
     }
     .remove {
@@ -2987,8 +3003,11 @@ select {
 }
 
 .client-status {
-    margin-right: 20px;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
+    .select-box {
+        margin-right: 0;
+    }
 }
 
 .error {
@@ -3266,6 +3285,10 @@ select {
     padding-bottom: 148px;
 }
 
+.form-contragent-wrap .contragent-form__item50 {
+    max-width: 100%;
+}
+
 .form-contragent-wrap .container {
     position: relative;
 }
@@ -3539,6 +3562,7 @@ select {
 
 .form-message {
     position: relative;
+    margin-bottom: 26px;
     textarea {
         border: none;
         min-height: 48px;
@@ -3577,6 +3601,26 @@ select {
         height: 14px;
         background: url(../img/plus-blue.svg) no-repeat center;
     }
+}
+
+.topWindow {
+    position: fixed;
+    left: 188px;
+    background: #fff;
+    max-width: 360px;
+    width: 100%;
+    top: 0;
+    height: auto;
+}
+
+.topWindowMess {
+    position: fixed;
+    right: 175px;
+    background: #fff;
+    top: 0;
+    max-width: 1142px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -3622,8 +3666,12 @@ M O B I L E
         max-width: 100%;
         width: 23.7%;
     }
+    .form-contragent-wrap .contragent-form__item50 {
+        max-width: 100%;
+        width: 100%;
+    }
     .info-item-title b {
-        width: 39%;
+        max-width: 50%;
     }
 }
 
@@ -3685,6 +3733,16 @@ M O B I L E
     .contragent-form__item {
         max-width: 100%;
         width: 23.55%;
+    }
+    .info-item-title b {
+        max-width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .info-item-title-box {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
     }
     .info-item-top__left .btn-more-box {
         position: absolute;
@@ -3830,11 +3888,11 @@ M O B I L E
     }
     .info-item-title b {
         max-width: 100%;
-        width: 93%;
+        width: 100%;
         margin-bottom: 15px;
     }
     .info-item-top__left span {
-        margin-right: 15px;
+        margin-right: 6px;
     }
     .info-item-top__left .btn-more span {
         margin: 0;
@@ -4116,6 +4174,11 @@ M O B I L E
 }
 
 @media screen and (max-width: 920px) {
+    .info-item-top__left,
+    .info-item-top__right {
+        min-height: initial;
+        max-height: initial;
+    }
     .stat-item {
         margin: 0 15px;
         margin-bottom: 25px;
