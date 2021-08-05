@@ -130,8 +130,12 @@
                                 </div>
 
                                 <form action="/" class="form-message" method="post">
-                                    <a href="#" class="add-files"></a>
-                                    <textarea name="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e|</textarea>
+                                    <label class="add-files">
+                                        <input type="file">
+                                        <span></span>
+                                    </label>
+
+                                    <textarea name="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</textarea>
                                     <button class="send-message" type="submit"></button>
                                 </form>
                             </div>
@@ -150,6 +154,9 @@
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 </body>
 
 </html>

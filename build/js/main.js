@@ -155,6 +155,11 @@ $(function() {
 
     });
 
+    $('.data-messages').datepicker({
+
+    });
+
+
     $('.date-new-event').datepicker({
 
     });
