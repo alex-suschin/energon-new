@@ -273,6 +273,19 @@ $(window).on('load', function() {
 
 });
 
+var objToStick2 = $("#message-form");
+var topOfObjToStick2 = $(objToStick2).offset().top;
+
+$(window).scroll(function() {
+    var windowScroll = $(window).scrollTop();
+
+    if (windowScroll > topOfObjToStick2) {
+        $(objToStick2).addClass("topWindowMess");
+    } else {
+        $(objToStick2).removeClass("topWindowMess");
+    };
+});
+
 $(window).on('load resize', function() {
     var width = $(window).width();
 
@@ -318,8 +331,7 @@ $(window).on('load resize', function() {
         // var objToStick = $("#objToStick");
         // var topOfObjToStick = $(objToStick).offset().top;
 
-        var objToStick2 = $("#message-form");
-        var topOfObjToStick2 = $(objToStick2).offset().top;
+
 
         // $(window).scroll(function() {
         //     var windowScroll = $(window).scrollTop();
@@ -331,15 +343,7 @@ $(window).on('load resize', function() {
         //     };
         // });
 
-        $(window).scroll(function() {
-            var windowScroll = $(window).scrollTop();
 
-            if (windowScroll > topOfObjToStick2) {
-                $(objToStick2).addClass("topWindowMess");
-            } else {
-                $(objToStick2).removeClass("topWindowMess");
-            };
-        });
     }
 
 

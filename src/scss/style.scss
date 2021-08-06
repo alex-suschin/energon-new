@@ -3605,22 +3605,47 @@ select {
 
 .topWindow {
     position: fixed;
-    left: 188px;
+    left: auto;
     background: #fff;
     max-width: 360px;
-    width: 100%;
+    width: inherit;
     top: 0;
     height: auto;
 }
 
 .topWindowMess {
     position: fixed;
-    right: 175px;
-    background: #fff;
+    right: auto;
+    background: #F4F6F6;
     top: 0;
-    max-width: 1142px;
-    width: 100%;
+    max-width: 1143px;
+    width: -webkit-fill-available;
     height: auto;
+    padding: 26px 0;
+}
+
+// .topWindowMess::before {
+//     content: '';
+//     display: block;
+//     bottom: -25px;
+//     height: 25px;
+//     width: 101%;
+//     background: #F4F6F6;
+// }
+// .topWindowMess::after {
+//     content: '';
+//     display: block;
+//     bottom: -25px;
+//     height: 25px;
+//     width: 101%;
+//     background: #F4F6F6;
+// }
+.topWindowMess .send-message {
+    top: 33px;
+}
+
+.topWindowMess .add-files {
+    top: 42px;
 }
 
 
@@ -3647,6 +3672,10 @@ M O B I L E
         max-width: 100%;
         width: 100%;
     }
+    .topWindowMess {
+        right: 16px;
+        width: calc(100vw - 27%);
+    }
 }
 
 @media screen and (max-width: 1560px) {
@@ -3672,6 +3701,13 @@ M O B I L E
     }
     .info-item-title b {
         max-width: 50%;
+    }
+    .plans-request {
+        padding: 15px 25px 94px 25px;
+    }
+    .dates-request input {
+        max-width: 136px;
+        width: 45%;
     }
 }
 
@@ -3726,6 +3762,9 @@ M O B I L E
     }
     .plans-calendar .datepicker--cell-year {
         width: 25%;
+    }
+    .plans-request {
+        max-width: 288px;
     }
 }
 
@@ -3933,6 +3972,12 @@ M O B I L E
     }
     .message-box__right {
         width: 100%;
+    }
+    .topWindowMess {
+        width: 97.5%;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 }
 
@@ -4511,6 +4556,7 @@ M O B I L E
         margin-bottom: 20px;
     }
     .plans-request {
+        max-width: 100%;
         padding: 15px 15px 94px 15px;
     }
     .plans-calendar {
@@ -4565,6 +4611,9 @@ M O B I L E
     .form-contragent-top .title {
         margin-bottom: 20px;
         font-size: 20px;
+    }
+    .dates-request input {
+        width: 100%;
     }
 }
 
