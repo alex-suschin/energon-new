@@ -2358,6 +2358,11 @@ select {
     display: none;
     margin-top: 25px;
     width: 100%;
+    .message-error {
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .plans-request-info {
