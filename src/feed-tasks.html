@@ -63,61 +63,8 @@
 
             <div class="content-box__info-item">
                 <div class="container">
-                    <div class="plans-box">
-                        <div class="plans-box__left">
-                            <div class="plans-calendar">
-
-                            </div>
-
-                            <div class="plans-request" id="objToStick">
-                                <div class="plans-request-info" id="toForm">
-                                    <div class="plans-request-img"><img src="img/request-ico.svg" alt=""></div>
-                                    <div class="plans-request-title">Новая заметка</div>
-                                    <div class="plans-request-desc">Добавленная заметка отображается в блоке *планировщика справа, через него вы можете редактировать текущие заметки или смещаь время их реализации на другой срок</div>
-                                    <a href="#" class="btn-blue">Добавить</a>
-                                </div>
-
-                                <div class="plans-request-form">
-                                    <div class="title">Добавить</div>
-                                    <form action="/" method="POST" class="form-request">
-                                        <div class="form-request__item">
-                                            <label for="">Заголовок</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="form-request__item">
-                                            <label for="">Описание</label>
-                                            <textarea name="" id="message-request"></textarea>
-                                        </div>
-                                        <div class="form-request__item">
-                                            <label for="">Приоритет</label>
-                                            <div class="priority-box">
-                                                <label class="priority priority-middle" for="middle"><input type="radio" name="input-priorites" id="middle"> <span><i></i></span></label>
-                                                <label class="priority priority-low" for="low"><input type="radio" name="input-priorites" id="low"> <span><i></i></span></label>
-                                                <label class="priority priority-high" for="high"><input type="radio" name="input-priorites" id="high"> <span><i></i></span></label>
-
-                                            </div>
-
-
-
-                                        </div>
-                                        <div class="form-request__item">
-                                            <label for="">Дата</label>
-                                            <input class="date-request" type="text">
-                                        </div>
-                                        <div class="dates-request">
-                                            <input type="time" id="time-from">
-                                            <input type="time" id="time-to">
-                                        </div>
-                                        <button class="btn-blue">Добавить</button>
-                                    </form>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="plans-box__right">
-                            <a href="#toForm" class="add-card"><span>Добавить</span><i></i></a>
+                    <div class="feed-tasks-box">
+                        <div class="feed-tasks__left">
                             <div class="dates-plans scrollbar-outer">
                                 <div class="date-plan-item">
                                     <div class="title">15 Марта</div>
@@ -289,6 +236,54 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+
+
+
+                        <div class="feed-tasks__right">
+                            <div class="plans-request" id="objToStick">
+
+                                <div class="plans-request-form">
+                                    <div class="title">Добавить</div>
+                                    <form action="/" method="POST" class="form-request">
+                                        <div class="form-request__item">
+                                            <label for="">Заголовок</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="form-request__item">
+                                            <label for="">Описание</label>
+                                            <textarea name="" id="message-request"></textarea>
+                                        </div>
+                                        <div class="form-request__item">
+                                            <label for="">Приоритет</label>
+                                            <div class="priority-box">
+                                                <label class="priority priority-middle" for="middle"><input type="radio" name="input-priorites" id="middle"> <span><i></i></span></label>
+                                                <label class="priority priority-low" for="low"><input type="radio" name="input-priorites" id="low"> <span><i></i></span></label>
+                                                <label class="priority priority-high" for="high"><input type="radio" name="input-priorites" id="high"> <span><i></i></span></label>
+
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="form-request__item">
+                                            <label for="">Дата</label>
+                                            <input class="date-request" type="text">
+                                        </div>
+                                        <div class="dates-request">
+                                            <input type="time" id="time-from">
+                                            <input type="time" id="time-to">
+                                        </div>
+                                        <button class="btn-blue">Добавить</button>
+                                    </form>
+
+                                </div>
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>

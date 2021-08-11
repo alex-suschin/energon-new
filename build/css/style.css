@@ -1947,6 +1947,7 @@ select {
   color: #BABABA; }
 
 .name-note {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 140%;
@@ -2284,6 +2285,47 @@ select {
     right: 36px;
     background: #fff;
     padding: 5px 0 5px 10px; }
+
+.feed-tasks-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .feed-tasks-box .plans-request {
+    margin-top: 0; }
+  .feed-tasks-box .plans-request-form {
+    display: block; }
+  .feed-tasks-box .topWindow {
+    margin-top: 26px; }
+
+.feed-tasks__left {
+  position: relative;
+  width: 74.51%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 40px 36px 0 36px; }
+
+.feed-tasks__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 23.53%;
+  border-radius: 10px; }
 
 .plans-request {
   width: 100%;
@@ -3198,11 +3240,15 @@ select {
       -ms-flex-align: center;
           align-items: center; }
 
-.form-new-task__box div:first-child {
+.form-new-task__box .form-new-task__box div:first-child {
   width: 76.49%; }
 
-.form-new-task__box div:last-child {
+.form-new-task__box .form-new-task__box div:last-child {
   width: 20.39%; }
+
+.form-new-task__box .form-new-task__box .nice-select {
+  width: 100%;
+  max-width: 100%; }
 
 .new-event-box {
   max-width: 739px;
@@ -3646,6 +3692,13 @@ M O B I L E
     width: 100%;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+  .feed-tasks__left {
+    width: 74.51%; }
+  .feed-tasks__right {
+    max-width: 288px;
+    width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
   .plans-calendar .datepicker {
     max-width: 100%;
     min-width: 100%; }
@@ -3726,6 +3779,8 @@ M O B I L E
   .alfavite a {
     padding: 0px 7px 0 7px; }
   .plans-box__right {
+    width: 68%; }
+  .feed-tasks__left {
     width: 68%; }
   .add-card-2 {
     right: 0; }
@@ -3946,6 +4001,8 @@ M O B I L E
     margin-bottom: 30px; }
   .plans-box__right {
     width: 65%; }
+  .feed-tasks__left {
+    width: 65%; }
   .dates-plans {
     width: 102%; }
   .events-dates .select-box {
@@ -4118,6 +4175,9 @@ M O B I L E
   .time {
     margin-right: 0; }
   .plans-box__right {
+    width: 58%;
+    padding: 18px 16px 0 16px; }
+  .feed-tasks__left {
     width: 58%;
     padding: 18px 16px 0 16px; }
   .date-plan-item .title {
@@ -4364,6 +4424,17 @@ M O B I L E
         -ms-flex-direction: column;
             flex-direction: column; }
   .plans-box__left {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; }
+  .feed-tasks-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .feed-tasks__left {
+    width: 100%; }
+  .feed-tasks__right {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px; }
