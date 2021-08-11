@@ -220,7 +220,7 @@
                     </div>
                     <a href="javascript:void(0)" class="btn-filter"><span>Фильтр</span></a>
                     <div class="elem-information__box">
-                        <div class="elem-item" id="tab_1" style="display: none;">
+                        <div class="elem-item" id="tab_1">
                             <div class="events-box">
                                 <div class="events-items">
                                     <div class="new-event-box" style="display: none;">
@@ -231,29 +231,52 @@
                                         <form action="/" method="post" class="form-new-task events-item task new-task green">
 
                                             <div class="title">Новое событие</div>
-                                            <div class="form-new-task__item">
-                                                <label for="">Контрагент</label>
-                                                <input type="text" value="">
-                                            </div>
                                             <div class="form-new-task__box">
+                                                <div class="form-new-task__item">
+                                                    <label for="title">Заголовок</label>
+                                                    <input type="text" name="title" id="title">
+                                                </div>
+                                                <div class="form-new-task__item">
+                                                    <label for="event_type">Тип события</label>
+                                                    <select name="event_type" id="event_type">
+                                                        <option value="5">Комментарий</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-new-task__item">
+                                                <label for="">Комментарий </label>
+                                                <textarea name=""></textarea>
+                                            </div>
+
+                                            <div class="form-new-task__item">
+                                                <label for="">Приоритет</label>
+                                                <div class="priority-box">
+                                                    <label class="priority priority-middle" for="middle"><input type="radio" name="input-priorites" id="middle"> <span><i></i></span></label>
+                                                    <label class="priority priority-low" for="low"><input type="radio" name="input-priorites" id="low"> <span><i></i></span></label>
+                                                    <label class="priority priority-high" for="high"><input type="radio" name="input-priorites" id="high"> <span><i></i></span></label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-new-task__item">
+                                                <label for="">Дата</label>
+                                                <input class="date-request" type="text">
+                                            </div>
+
+                                            <div class="time-box">
+                                                <div class="form-new-task__item">
+                                                    <label for="">Время с</label>
+                                                    <input type="time" id="time-from">
+                                                </div>
 
                                                 <div class="form-new-task__item">
-                                                    <label for="">Название события</label>
-                                                    <input type="text" value="Заказ">
-                                                </div>
-                                                <div class="form-new-task__item">
-                                                    <label for="">Дата</label>
-                                                    <input type="text" class="date-new-event" value="">
+                                                    <label for="">Время по</label>
+                                                    <input type="time" id="time-to">
                                                 </div>
                                             </div>
-                                            <div class="form-new-task__item">
-                                                <label for="">Контактное лицо</label>
-                                                <input type="text" value="Резник Евгений Александрович">
-                                            </div>
-                                            <div class="form-new-task__item">
-                                                <label for="">Основания </label>
-                                                <textarea name="">Являясь всего лишь частью общей картины, независимые государства, вне зависимости от их уровня, должны быть функционально разнесены</textarea>
-                                            </div>
+
+
+
                                             <button class="btn-blue">Создать</button>
                                         </form>
                                     </div>
@@ -511,7 +534,7 @@
                                 <a href="javascript:void(0)" class="add-card"><span>Добавить</span><i></i></a>
                             </div>
                         </div>
-                        <div class="elem-item" id="tab_3">
+                        <div class="elem-item" id="tab_3" style="display: none;">
                             <div class="feed-tasks-box">
                                 <div class="feed-tasks__left">
                                     <div class="dates-plans scrollbar-outer">
@@ -691,7 +714,7 @@
 
 
                                 <div class="feed-tasks__right">
-                                    <div class="plans-request" id="objToStick">
+                                    <div class="plans-request">
 
                                         <div class="plans-request-form">
                                             <div class="title">Добавить</div>

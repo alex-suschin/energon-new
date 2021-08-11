@@ -3286,17 +3286,23 @@ select {
     align-items: center;
 }
 
-.form-new-task__box .form-new-task__box div:first-child {
-    width: 76.49%;
+.form-new-task__box div:first-child {
+    width: 58%;
 }
 
-.form-new-task__box .form-new-task__box div:last-child {
-    width: 20.39%;
+.form-new-task__box div:last-child {
+    width: 38%;
 }
 
-.form-new-task__box .form-new-task__box .nice-select {
-    width: 100%;
+.form-new-task__box .nice-select {
+    width: 100%!important;
     max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-new-task__box .nice-select .list {
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .new-event-box {
@@ -3711,6 +3717,15 @@ select {
 
 .topWindowMess .add-files {
     top: 42px;
+}
+
+.time-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .form-new-task__item {
+        width: 48%;
+    }
 }
 
 
@@ -4722,6 +4737,15 @@ M O B I L E
     }
     .contragent-form .form-btns button {
         max-width: 100%;
+        width: 100%;
+    }
+    .form-new-task__box {
+        flex-wrap: wrap;
+    }
+    .form-new-task__box div:first-child {
+        width: 100%;
+    }
+    .form-new-task__box div:last-child {
         width: 100%;
     }
 }
