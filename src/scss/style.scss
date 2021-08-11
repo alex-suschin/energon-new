@@ -112,6 +112,19 @@ button {
     margin-bottom: 15px;
 }
 
+.btn-blue {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    background: #2E5BFF;
+    padding: 14px 0 14px 0;
+    border-radius: 10px;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -361,6 +374,14 @@ select {
     user-select: none;
     white-space: nowrap;
     width: auto;
+}
+
+.nice-select .current {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 98%;
 }
 
 .nice-select:hover {
@@ -689,6 +710,7 @@ input[type="search"]::-webkit-search-results-decoration {
             right: -5px;
         }
         .current {
+            width: 100%;
             font-weight: normal;
             font-size: 12px;
             line-height: 100%;

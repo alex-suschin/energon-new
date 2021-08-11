@@ -17,17 +17,17 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.eot");
-  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
@@ -122,6 +122,18 @@ button {
   font-weight: 400;
   line-height: 29px;
   margin-bottom: 15px; }
+
+.btn-blue {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  background: #2E5BFF;
+  padding: 14px 0 14px 0;
+  border-radius: 10px; }
 
 img {
   max-width: 100%;
@@ -372,6 +384,14 @@ select {
   user-select: none;
   white-space: nowrap;
   width: auto; }
+
+.nice-select .current {
+  display: block;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 98%; }
 
 .nice-select:hover {
   border-color: #dbdbdb; }
@@ -691,6 +711,7 @@ input[type="search"]::-webkit-search-results-decoration {
       left: initial;
       right: -5px; }
     .select-box .nice-select .current {
+      width: 100%;
       font-weight: normal;
       font-size: 12px;
       line-height: 100%;

@@ -273,18 +273,22 @@ $(window).on('load', function() {
 
 });
 
-var objToStick2 = $("#message-form");
-var topOfObjToStick2 = $(objToStick2).offset().top;
+if ($("div").is("#message-form")) {
+    var objToStick2 = $("#message-form");
+    var topOfObjToStick2 = $(objToStick2).offset().top;
 
-$(window).scroll(function() {
-    var windowScroll = $(window).scrollTop();
+    $(window).scroll(function() {
+        var windowScroll = $(window).scrollTop();
 
-    if (windowScroll > topOfObjToStick2) {
-        $(objToStick2).addClass("topWindowMess");
-    } else {
-        $(objToStick2).removeClass("topWindowMess");
-    };
-});
+        if (windowScroll > topOfObjToStick2) {
+            $(objToStick2).addClass("topWindowMess");
+        } else {
+            $(objToStick2).removeClass("topWindowMess");
+        };
+    });
+}
+
+
 
 $(window).on('load resize', function() {
     var width = $(window).width();
@@ -328,22 +332,24 @@ $(window).on('load resize', function() {
     }
 
     if (width > '750') {
-        // var objToStick = $("#objToStick");
-        // var topOfObjToStick = $(objToStick).offset().top;
+        if ($("div").is("#objToStick")) {
+            var objToStick = $("#objToStick");
+            var topOfObjToStick = $(objToStick).offset().top;
 
 
 
-        // $(window).scroll(function() {
-        //     var windowScroll = $(window).scrollTop();
+            $(window).scroll(function() {
+                var windowScroll = $(window).scrollTop();
 
-        //     if (windowScroll > topOfObjToStick) {
-        //         $(objToStick).addClass("topWindow");
-        //     } else {
-        //         $(objToStick).removeClass("topWindow");
-        //     };
-        // });
+                if (windowScroll > topOfObjToStick) {
+                    $(objToStick).addClass("topWindow");
+                } else {
+                    $(objToStick).removeClass("topWindow");
+                };
+            });
 
 
+        }
     }
 
 
